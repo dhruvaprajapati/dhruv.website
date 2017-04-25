@@ -1,6 +1,6 @@
 const express = require('express');
 const hbs = require('hbs');
-
+const port = process.env.port || 4040;
 let app = express();
 hbs.registerPartials(__dirname + '/views/partials');
 app.set('view-engine', hbs);
@@ -45,6 +45,6 @@ app.get('/bad', (req, res) => {
 });
 
 
-app.listen(4040, () => {
-  console.log('Server is listing on 4040');
+app.listen(port, () => {
+  console.log(`Server is listing on ${4040}`);
 });
